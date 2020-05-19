@@ -9,3 +9,6 @@ create table states_tegs
         foreign key (id_teg) references tegs (id_teg)
 );
 
+INSERT INTO bd.states_tegs (id_state, id_teg) VALUES (1, 3);
+INSERT INTO bd.states_tegs (id_state, id_teg) VALUES (3, 3);
+INSERT INTO bd.states_tegs (id_state, id_teg) VALUES (3, 4);

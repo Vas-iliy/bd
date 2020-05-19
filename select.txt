@@ -1,0 +1,17 @@
+SELECT registration.login, cats.name, states.title, states.content  FROM states
+    JOIN registration USING (id_login) JOIN cats USING (id_cat) WHERE states.moder = 'go'
+ORDER BY states.time LIMIT 2;
+SELECT cats.name FROM cats;
+
+SELECT registration.login,states.title, states.content, cats.name, tegs.name
+FROM states JOIN registration USING (id_login) JOIN cats USING (id_cat)
+    JOIN states_tegs USING (id_state) JOIN tegs USING (id_teg) WHERE states.id_state = '3';
+
+SELECT states.title, states.content FROM cats JOIN states
+    USING (id_cat) WHERE cats.id_cat = '3';
+
+SELECT tegs.name, states.title, states.content FROM tegs JOIN states_tegs USING (id_teg)
+    JOIN states USING (id_state) WHERE tegs.id_teg = '3';
+
+SELECT registration.login, registration.email, states.title, states.content
+FROM registration JOIN states USING (id_login) WHERE id_login = '1';
